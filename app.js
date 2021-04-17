@@ -43,7 +43,6 @@ container.addEventListener('mouseenter', (e) => {
 
   let base = 50;
   let offset = 25;
-  let shVal = 0.35;
 
   // Pop Out
   title.style.transform = `translateZ(${base + offset}px)`;
@@ -54,10 +53,12 @@ container.addEventListener('mouseenter', (e) => {
   degrees.style.transform = `translateZ(${base + offset * 2}px)`;
   text.style.transform = `translateZ(${base + offset * 2}px)`;
 
+  let shVal = 0.35;
+
   // Add Shadow
-  title_sh.style.color = `rgba(0, 0, 0, ${shVal * 2})`;
-  img_sh.style.background = `rgba(0, 0, 0, ${shVal * 2})`;
-  info_sh.style.color = `rgba(0, 0, 0, ${shVal * 2})`;
+  title_sh.style.color = `rgba(0, 0, 0, ${shVal * 3})`;
+  img_sh.style.background = `rgba(0, 0, 0, ${shVal * 3})`;
+  info_sh.style.color = `rgba(0, 0, 0, ${shVal * 3})`;
   contact_sh.style.background = `rgba(0, 0, 0, ${shVal})`;
   allsocials_sh.forEach((el) => {
     el.style.background = `rgba(0, 0, 0, ${shVal})`;

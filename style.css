@@ -156,6 +156,10 @@ body {
   cursor: pointer;
 }
 
+.socials .button:hover {
+  background: rgb(255, 84, 84);
+}
+
 svg {
   fill: #282c34;
 }
@@ -180,4 +184,8 @@ svg {
   align-items: center;
   justify-content: center;
   display: flex;
+}
+
+.contact .button:hover {
+  background: #00a181;
 }
