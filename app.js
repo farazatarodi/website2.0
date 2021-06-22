@@ -12,6 +12,7 @@ const degrees = document.querySelector('.degrees');
 const text = document.querySelector('.text');
 
 // Rotate comps
+const body = document.querySelector('body');
 const circle1 = document.querySelector('.circle1');
 const circle2 = document.querySelector('.circle2');
 const circle3 = document.querySelector('.circle3');
@@ -30,11 +31,6 @@ container.addEventListener('mousemove', (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 75;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 75;
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-
-  // Rotate
-  circle1.style.transform = `rotateZ(-${(xAxis + yAxis) * 20}deg)`;
-  circle2.style.transform = `rotateZ(-${(xAxis + yAxis) * 20}deg)`;
-  circle3.style.transform = `rotateZ(${(xAxis + yAxis) * 20}deg)`;
 });
 
 // Animate in
@@ -81,11 +77,6 @@ container.addEventListener('mouseleave', (e) => {
   degrees.style.transform = 'translateZ(0px)';
   text.style.transform = 'translateZ(0px)';
 
-  // Rotate back
-  circle1.style.transform = 'rotateZ(0deg)';
-  circle2.style.transform = 'rotateZ(0deg)';
-  circle3.style.transform = 'rotateZ(0deg)';
-
   // Remove Shadow
   title_sh.style.color = 'rgba(0, 0, 0, 0)';
   img_sh.style.background = 'rgba(0, 0, 0, 0)';
@@ -96,4 +87,24 @@ container.addEventListener('mouseleave', (e) => {
   });
   degrees_sh.style.color = `rgba(0, 0, 0, 0)`;
   text_sh.style.color = `rgba(0, 0, 0, 0)`;
+});
+
+function getCenter(element) {
+  const { left, top, width, height } = element.getBoundingClientRect();
+  return { x: left + width / 2, y: top + height / 2 };
+}
+const c1Center = getCenter(circle1);
+const c2Center = getCenter(circle2);
+const c3Center = getCenter(circle3);
+
+// circle rotate with mouse
+body.addEventListener('mousemove', ({ clientX, clientY }) => {
+  const c1A = Math.atan2(clientY - c1Center.y, clientX - c1Center.x);
+  const c2A = Math.atan2(clientY - c2Center.y, clientX - c2Center.x);
+  const c3A = Math.atan2(clientY - c3Center.y, clientX - c3Center.x);
+
+  // Rotate
+  circle1.style.transform = `rotate(${c1A}rad)`;
+  circle2.style.transform = `rotate(${c2A}rad)`;
+  circle3.style.transform = `rotate(${c3A}rad)`;
 });

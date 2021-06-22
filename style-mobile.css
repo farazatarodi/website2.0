@@ -15,102 +15,22 @@
       rgba(44, 49, 58, 0.75),
       rgba(40, 44, 52, 0.7)
     );
-    box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.2),
-      0px 0px 3.5rem rgba(0, 0, 0, 0.2);
-    border-radius: 2rem;
-  }
-
-  .content {
-    position: relative;
-  }
-
-  .photo img {
-    transition: all 0.5s ease-out;
-  }
-
-  .photo {
-    min-height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .info h1 {
     font-size: 2.5rem;
-    transition: all 0.5s ease-out;
-    color: #e5e5e5;
-  }
-
-  .info h3 {
-    font-size: 1.5rem;
-    padding: 1rem 0rem;
-    color: rgb(214, 214, 214);
-    font-weight: lighter;
-    transition: all 0.5s ease-out;
-  }
-
-  .degrees {
-    font-size: 1.2rem;
-    padding: 1rem 0rem;
-    color: #a4ffed;
-    font-weight: lighter;
-    transition: all 0.5s ease-out;
-  }
-
-  .text {
-    font-size: 1.1rem;
-    padding: 1rem 0rem;
-    color: white;
-    font-weight: lighter;
-    transition: all 0.5s ease-out;
-    text-align: justify;
   }
 
   .socials {
-    display: flex;
-    padding: 1rem 0rem;
-    justify-content: space-between;
-    transition: all 0.5s ease-out;
     flex-wrap: wrap;
     gap: 0.5rem;
   }
 
   .socials .button {
     padding: 0.5rem;
-    border-radius: 2rem;
     font-weight: bold;
-    color: #585858;
-    background: rgb(255, 102, 102);
-    border: none;
-    cursor: pointer;
     margin-top: 1rem;
     width: 45%;
-    justify-content: center;
-    display: flex;
-  }
-
-  svg {
-    fill: #282c34;
-  }
-
-  .contact {
-    margin-top: 2rem;
-    display: grid;
-  }
-
-  .contact .button {
-    width: 100%;
-    padding: 1rem 0rem;
-    background: #00ffcc;
-    border: none;
-    color: black;
-    cursor: pointer;
-    border-radius: 2rem;
-    font-weight: bolder;
-    font-size: 1rem;
-    transition: all 0.5s ease-out;
-    cursor: pointer;
-    align-items: center;
     justify-content: center;
     display: flex;
   }
@@ -119,54 +39,9 @@
     display: none;
   }
 
-  .circle1 {
-    position: relative;
-    width: 10rem;
-    height: 10rem;
-    background: linear-gradient(
-      to right bottom,
-      rgba(0, 255, 204, 0.3),
-      rgba(255, 102, 102, 0.3)
-    );
+  .circle-container {
+    min-width: 90%;
+    min-height: 80%;
     position: absolute;
-    top: 15%;
-    left: 10%;
-    border-radius: 50%;
-    z-index: -1;
-    transition: all 0.5s ease-out;
-  }
-
-  .circle2 {
-    position: relative;
-    width: 3rem;
-    height: 3rem;
-    background: linear-gradient(
-      to right bottom,
-      rgba(0, 255, 204, 0.3),
-      rgba(255, 102, 102, 0.3)
-    );
-    position: absolute;
-    top: 14%;
-    left: 9%;
-    border-radius: 50%;
-    z-index: -1;
-    transition: all 0.5s ease-out;
-  }
-
-  .circle3 {
-    position: relative;
-    width: 15rem;
-    height: 15rem;
-    background: linear-gradient(
-      to left bottom,
-      rgba(0, 255, 204, 0.3),
-      rgba(255, 102, 102, 0.3)
-    );
-    position: absolute;
-    bottom: 15%;
-    right: 15%;
-    border-radius: 50%;
-    z-index: -10;
-    transition: all 0.5s ease-out;
   }
 }

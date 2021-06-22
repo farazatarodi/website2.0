@@ -57,21 +57,24 @@ body {
   justify-content: center;
 }
 
+.circle-container {
+  height: 70%;
+  width: 45%;
+  position: absolute;
+}
+
 .circle1 {
   position: relative;
   width: 10rem;
   height: 10rem;
   background: linear-gradient(
-    to right bottom,
+    to right,
     rgba(0, 255, 204, 0.3),
     rgba(255, 102, 102, 0.3)
   );
   position: absolute;
-  top: 15%;
-  left: 29%;
   border-radius: 50%;
-  z-index: -1;
-  transition: all 0.5s ease-out;
+  top: 1%;
 }
 
 .circle2 {
@@ -79,16 +82,12 @@ body {
   width: 3rem;
   height: 3rem;
   background: linear-gradient(
-    to right bottom,
+    to right,
     rgba(0, 255, 204, 0.3),
     rgba(255, 102, 102, 0.3)
   );
   position: absolute;
-  top: 14%;
-  left: 28.5%;
   border-radius: 50%;
-  z-index: -1;
-  transition: all 0.5s ease-out;
 }
 
 .circle3 {
@@ -96,16 +95,14 @@ body {
   width: 15rem;
   height: 15rem;
   background: linear-gradient(
-    to left bottom,
+    to right,
     rgba(0, 255, 204, 0.3),
     rgba(255, 102, 102, 0.3)
   );
   position: absolute;
-  bottom: 15%;
-  right: 25%;
   border-radius: 50%;
-  z-index: -10;
-  transition: all 0.5s ease-out;
+  right: 0;
+  bottom: 0;
 }
 
 .info h1 {
